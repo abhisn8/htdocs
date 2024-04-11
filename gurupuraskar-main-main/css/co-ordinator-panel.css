@@ -1,0 +1,7 @@
+/* Mobile Styles */
+main .searchbar-container {
+    display: block;
+}
+main .users-list {
+    display: flex;
+}

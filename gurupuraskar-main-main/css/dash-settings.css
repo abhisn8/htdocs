@@ -1,0 +1,201 @@
+/* Mobile Styles */
+/* User Data */
+/* .user-contact-info, .user-details {
+    display: none;
+} */
+.settings-dropdown {
+    margin-top: 10px;
+}
+.user-data {
+    margin: 15px 0px;
+    padding: 10px 10px 10px 35px;
+    background-color: var(--color-whitesmoke-200);
+    border-radius: 5px;
+    gap: 40px;
+}
+.user-data .user-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+}
+
+/* Settings */
+.account-settings .title {
+    margin: 10px 25px;
+    padding: 15px 0px;
+    border-bottom: 1px solid var(--color-light-gray-100);
+    justify-content: center;
+    align-items: center;
+}
+.account-settings .title button {
+    width: 50%;
+}
+.account-settings .title button.selected {
+    background-color: var(--color-black);
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--color-white);
+    font-weight: bold;
+}
+.account-settings .title button.selected h3 {
+    font-weight: bold;
+}
+
+.account-settings .user-contact-info,
+.account-settings .user-details {
+    margin-top: 10px;
+    background-color: var(--color-light-gray);
+    padding: 25px;
+    flex-flow: column;
+    justify-content: center;
+    gap: 35px;
+}
+.account-settings .user-contact-info input,
+.account-settings .user-details input {
+    border-bottom: 1.5px solid var(--color-light-gray-100);
+}
+.account-settings .user-details .buttons button {
+    width: 60%;
+    padding: 5px 10px;
+    background-color: var(--color-black);
+    border-radius: 5px;
+    color: var(--color-white);
+}
+
+/* Transactions Table */
+.transactions-table {
+    display: none;
+}
+.transactions-table thead {
+    display: none;
+}
+.transactions-table tbody tr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px 25px;
+}
+.transactions-table tbody tr:nth-child(2n) {
+    background-color: var(--color-light-gray);
+}
+.transactions-table tbody tr td:nth-child(2) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    color: var(--color-gray-100);
+}
+.transactions-table tbody tr td:nth-child(3) {
+    text-align: end;
+}
+.transactions-table tbody tr td:nth-child(4) {
+    text-align: end;
+    color: var(--color-gray-100);
+}
+.transactions-table tbody tr td:nth-child(5) {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    justify-content: flex-end;
+}
+.transactions-table tbody tr td a {
+    color: var(--color-blue);
+    font-weight: 600;
+}
+.success-popup #printReceipt {
+    border: none;
+    outline: none;
+}
+.success-popup #printReceipt h4 {
+    color: #fff;
+}
+.success-popup #closePrintPopupBtn {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    outline: none;
+    width: 10%;
+    font-weight: 900;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    .user-data {
+        width: 50%;
+    }
+    /* Settings */
+    .account-settings .user-contact-info {
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    .account-settings .user-contact-info .input-field {
+        width: 50%;
+    }
+    .account-settings .user-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1230px) {
+    .user-data {
+        width: 375px;
+    }
+    /* Settings */
+    .account-settings {
+        width: 100%;
+    }
+    .account-settings .title {
+        margin: 0px;
+        justify-content: flex-start;
+    }
+    .account-settings .title button {
+        width: 15%;
+    }
+    .account-settings .user-contact-info {
+        justify-content: flex-start;
+        border-radius: 10px;
+    }
+    .account-settings .user-contact-info .input-field {
+        width: 25%;
+    }
+    .account-settings .user-details {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-radius: 10px;
+    }
+    .account-settings .user-details .buttons button {
+        width: 75%;
+    }
+
+    /* Transactions Table */
+    .transactions-table thead {
+        display: table-header-group;
+    }
+    .transactions-table thead tr {
+        border-bottom: 1px solid var(--color-light-gray-100);
+    }
+    .transactions-table thead tr th {
+        padding: 15px 25px;
+        text-align: start;
+    }
+    .transactions-table tbody tr {
+        display: table-row;
+        width: 100%;
+    }
+    .transactions-table tbody tr td {
+        padding: 15px 25px;
+        text-align: start;
+    }
+    .transactions-table tbody tr td:nth-child(3) {
+        text-align: unset;
+    }
+    .transactions-table tbody tr td:nth-child(4) {
+        text-align: unset;
+    }
+    .transactions-table tbody tr td:nth-child(5) {
+        justify-content: start;
+    }
+    #transactionReceipt {
+        width: 50%;
+    }
+}

@@ -1,0 +1,420 @@
+/* Background Color White */
+:root {
+    /* fonts */
+    --font-montserrat: Montserrat;
+    --font-poppins: Poppins;
+  
+    /* font sizes */
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+    --font-size-17xl: 36px;
+    --font-size-5xl: 24px;
+  
+    /* Colors */
+    --color-white: rgb(255, 255, 255);
+    --color-white-50: rgba(255, 255, 255, 0.5);
+    --color-black: rgb(0, 0, 0);
+    --color-dimgray-100: rgb(77, 77, 77);
+    --color-light-gray: rgba(241, 245, 245, 1);
+    --color-light-gray-100: rgba(215, 215, 215, 1);
+    --color-gray-100: rgb(125, 125, 125);
+    --color-whitesmoke-100: rgb(248, 247, 243);
+    --color-whitesmoke-200: rgba(238, 238, 238, 0.5);
+    --color-bright-green: rgb(23, 224, 115);
+    --color-light-green: rgba(202, 255, 226, 1);
+    --color-bright-red: rgb(235, 0, 27);
+    --color-light-red: rgba(255, 207, 207, 0.5);
+    --color-light-yellow: rgba(255, 245, 219, 1);
+    --color-orange: rgba(255, 138, 0, 1);
+    --color-blue: rgba(58, 120, 240, 1);
+    --color-light-blue: rgba(218, 230, 255, 1);
+    --color-light-turquoise: rgb(222, 244, 255);
+    --color-gold: rgba(255, 200, 57, 1);
+    --color-dim-brown: rgba(249, 240, 216, 1);
+    --color-dim-blue: rgba(221, 227, 243, 1);
+    --color-dim-green: rgba(222, 237, 228, 1);
+    --color-dim-orange: rgba(255, 232, 221, 1);
+    /* Linear gradients */
+    --gradient-gold: linear-gradient(90deg, #FFC839 0%, rgba(241, 241, 241, 0) 95.3%);
+    --gradient-silver: linear-gradient(90deg, #D2D2D2 0%, rgba(241, 241, 241, 0) 95.3%);
+    --gradient-bronze: linear-gradient(90deg, #FEA979 0%, rgba(241, 241, 241, 0) 95.3%);
+
+    /* border radiuses */
+    --br-7xs: 6px;
+    --br-3xs: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    border-collapse: collapse;
+    font-family: var(--font-montserrat);
+    border-collapse: collapse;
+    transition: 0.1s all ease-in-out;
+}
+
+/* Anchor styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Warning elements */
+[id^="warn"] {
+    /* display: none; */
+    color: var(--color-bright-red);
+}
+
+/* Button styles */
+button[disabled="true"] {
+    cursor: not-allowed;
+    background-color: var(--color-gray-100) !important;
+}
+
+/* Bullets */
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+.dot.red {
+    background-color: var(--color-bright-red);
+}
+.dot.orange {
+    background-color: var(--color-orange);
+}
+.dot.green {
+    background-color: var(--color-bright-green);
+}
+
+/* Scrollbar */
+.scroll-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+  
+/* Fonts */
+.bold {
+    font-weight: bold;
+}
+.fw-100 {
+    font-weight: 100;
+}
+.fw-200 {
+    font-weight: 200;
+}
+.fw-300 {
+    font-weight: 300;
+}
+.fw-300 {
+    font-weight: 300;
+}
+.fw-400 {
+    font-weight: 400;
+}
+.fw-500 {
+    font-weight: 500;
+}
+.fw-600 {
+    font-weight: 600;
+}
+
+/* Border */
+.border-radius-5px {
+    border-radius: 5px;
+}
+.border-radius-10px {
+    border-radius: 10px;
+}
+.border-radius-15px {
+    border-radius: 15px;
+}
+.border-radius-20px {
+    border-radius: 20px;
+}
+.no-border {
+    border: none;
+}
+.circular-border {
+    border-radius: 50%;
+}
+
+/* Icons */
+.icon {
+    width: 45px;
+    height: 43px;
+    border: 0.5px solid var(--accent-color-gray);
+    border-radius: 50%;
+}
+.icon.no-border {
+    border: none;
+}
+i {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+i.smaller {
+    font-size: smaller;
+}
+i.small {
+    font-size: small;
+}
+i.large {
+    font-size: large;
+}
+i.x-large {
+    font-size: x-large;
+}
+i.xx-large {
+    font-size: xx-large;
+}
+
+/* Float */
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+
+/* Position */
+.position-relative {
+    position: relative;
+}
+.position-absolute {
+    position: absolute;
+}
+.position-fixed {
+    position: fixed;
+}
+.top {
+    top: 0;
+}
+.bottom {
+    bottom: 0;
+}
+
+/* Height and Width */
+.fit-content {
+    width: fit-content;
+}
+.full-width {
+    width: 100%;
+}
+.width-90 {
+    width: 90%;
+}
+.width-75 {
+    width: 75%;
+}
+.width-60 {
+    width: 60%;
+}
+.width-50 {
+    width: 50%;
+}
+.width-25 {
+    width: 25%;
+}
+.width-10 {
+    width: 10%;
+}
+.full-height {
+    height: 100vh;
+}
+
+/* Margin */
+/* All Sides */
+.margin-5px {
+    margin: 5px;
+}
+.margin-10px {
+    margin: 10px;
+}
+.margin-15px {
+    margin: 15px;
+}
+.margin-20px {
+    margin: 20px;
+}
+/* Top */
+.margin-top-5px {
+    margin-top: 5px;
+}
+.margin-top-10px {
+    margin-top: 10px;
+}
+.margin-top-15px {
+    margin-top: 15px;
+}
+.margin-top-20px {
+    margin-top: 20px;
+}
+/* Bottom */
+.margin-bottom-5px {
+    margin-bottom: 5px;
+}
+.margin-bottom-10px {
+    margin-bottom: 10px;
+}
+.margin-bottom-15px {
+    margin-bottom: 15px;
+}
+.margin-bottom-20px {
+    margin-bottom: 20px;
+}
+/* Side */
+.margin-side-5px {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.margin-side-10px {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.margin-side-15px {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.margin-side-20px {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Padding */
+/* All Sides */
+.padding-5px {
+    padding: 5px;
+}
+.padding-10px {
+    padding: 10px;
+}
+.padding-15px {
+    padding: 15px;
+}
+.padding-20px {
+    padding: 20px;
+}
+/* Top */
+.padding-top-5px {
+    padding-top: 5px;
+}
+.padding-top-10px {
+    padding-top: 10px;
+}
+.padding-top-15px {
+    padding-top: 15px;
+}
+.padding-top-20px {
+    padding-top: 20px;
+}
+/* Bottom */
+.padding-bottom-5px {
+    padding-bottom: 5px;
+}
+.padding-bottom-10px {
+    padding-bottom: 10px;
+}
+.padding-bottom-15px {
+    padding-bottom: 15px;
+}
+.padding-bottom-20px {
+    padding-bottom: 20px;
+}
+/* Side */
+.padding-side-5px {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.padding-side-10px {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.padding-side-15px {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.padding-side-20px {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Gap */
+.gap-5px {
+    gap: 5px;
+}
+.gap-10px {
+    gap: 10px;
+}
+.gap-15px {
+    gap: 15px;
+}
+.gap-20px {
+    gap: 20px;
+}
+
+/* Flex container styles. */
+.flex {
+    display: flex;
+}
+.flex.row {
+    flex-flow: row wrap;
+}
+.flex.column {
+    flex-flow: column;
+}
+/* Justify content. */
+.flex.justify-center {
+    justify-content: center;
+}
+.flex.justify-sp-bt {
+    justify-content: space-between;
+}
+.flex.justify-sp-ard {
+    justify-content: space-around;
+}
+.flex.justify-start {
+    justify-content: flex-start;
+}
+.flex.justify-end {
+    justify-content: flex-end;
+}
+/* Align items. */
+.flex.align-center {
+    align-items: center;
+}
+.flex.align-start {
+    align-items: flex-start;
+}
+.flex.align-end {
+    align-items: flex-end;
+}
+
+/* Grid Styles */
+.grid {
+    display: grid;
+}
+
+/* Center Horizontally. */
+.center-horizontal {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Text styles. */
+.text-center {
+    text-align: center;
+}
+
+/* Other Styles */
+.cursor-pointer {
+    cursor: pointer;
+}

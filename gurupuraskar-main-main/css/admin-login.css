@@ -1,0 +1,61 @@
+/* Mobile Styles */
+main .logo {
+    padding: 25px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+main form {
+    padding: 125px 70px 50px 70px;
+    gap: 50px;
+}
+main form div {
+    gap: 35px;
+}
+main form button {
+    width: 100%;
+    margin-top: 50px;
+    border: none;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+main form .input-field h5::after {
+    content: " *";
+    color: var(--color-bright-red);
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    main form button {
+        width: 45%;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    main {
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--color-black);
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main form {
+        width: 35%;
+        padding: 70px;
+        background-color: var(--color-white);
+    }
+    main form .input-field {
+        width: 60%;
+    }
+    main .logo {
+        width: 35%;
+        background-color: var(--color-white);
+        color: var(--color-black);
+    }
+}

@@ -1,0 +1,373 @@
+#pay-form, #warn-rp {
+    display: none;
+}
+
+/* Dashboard for Points and Rewards Styles */
+/* Mobile Styles */
+header.pts-dash-header {
+    background-image: url(../assets/svg/dashboard-wallpaper-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Points Avail Section */
+header .pts-avail-section {
+    padding: 20px 0px;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+header .pts-avail-section .pts-avail-option {
+    background-color: var(--color-whitesmoke-200);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+}
+header .pts-avail-section .pts-avail-option:nth-child(3) {
+    background-image: url(../assets/svg/redeem-pts-wallpaper.svg);
+    color: var(--color-white);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header .pts-avail-section .pts-avail-option button {
+    background-color: var(--color-black);
+    padding: 7.5px 10px;
+    border-radius: 10px;
+}
+header .pts-avail-section .pts-avail-option button h3 {
+    color: var(--color-white);
+}
+header .pts-avail-section .pts-avail-option .score-display {
+    padding: 10px 10px 10px 45px;
+    background-color: var(--color-white-50);
+    border-radius: 5px;
+}
+header .pts-avail-section .pts-avail-option .redeem-btn {
+    background-color: var(--color-light-yellow);
+    padding-right: 25px;
+    padding-left: 45px;
+}
+header .pts-avail-section .pts-avail-option .redeem-btn h3 {
+    color: var(--color-orange);
+}
+
+/* Main */
+main .user-activity {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+main .user-activity .invite-section {
+    background-color: var(--color-light-gray);
+    padding: 25px;
+    flex-flow: column;
+    gap: 25px;
+}
+main .user-activity .invite-section input {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+main .user-activity .invite-section .inputs {
+    flex-flow: column;
+    gap: 10px;
+}
+main .user-activity .invite-section .inputs .mobile-num-input {
+    background-color: var(--color-white);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+main .user-activity .invite-section .inputs .mobile-num-input button {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+main .user-activity .invite-section .inputs .referral-code {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+main .user-activity .invite-section .inputs .referral-code .copy-btn {
+    color: var(--color-white);
+    background-color: var(--color-bright-green);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Points Table */
+main .points-table .title {
+    padding: 25px 25px 7.5px 25px;
+}
+main .points-table .title h4 {
+    margin: 0px 0px 20px 7.5px;
+}
+main .points-table .navigators {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-light-gray-100);
+}
+main .points-table .navigators button {
+    font-size: 1rem;
+}
+main .points-table .navigators button.selected {
+    font-weight: 600;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+
+main .points-table table thead {
+    display: none;
+}
+
+main .points-table table tbody {
+    display: none;
+}
+main .points-table table tbody.toggle-tables.selected {
+    display: table-row-group;
+}
+main .points-table table tbody tr {
+    width: 100%;
+    padding: 10px 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+main .points-table table tbody tr:nth-child(2n) {
+    background-color: var(--color-light-gray);
+}
+
+main .points-table table tbody tr td:nth-child(2) img {
+    background-color: var(--color-light-turquoise);
+    border-radius: 50%;
+}
+main .points-table table tbody tr td:nth-child(1) {
+    font-weight: bold;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+main .points-table table tbody tr td:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: end;
+}
+main .points-table table tbody tr td:nth-child(3) {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: end;
+}
+main .points-table table tbody tr td:nth-child(4) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: end;
+}
+main .points-table table tbody tr td:nth-child(5) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: end;
+}
+main .points-table table tbody tr td:nth-child(5)::before {
+    content: "Balance:";
+    font-weight: bold;
+}
+
+/* Points Converter Popup */
+.points-converter-bg {
+    display: none;
+    background-color: rgb(0 0 0 / 68%);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+.points-converter-bg .points-converter {
+    margin: 90px 42px auto 25px;
+    padding: 40px 35px 50px 35px;
+    background-color: var(--color-white);
+    gap: 60px;
+}
+.points-converter-bg .points-converter .topbar {
+    gap: 90px;
+}
+.points-converter-bg .points-converter .topbar #user-scores {
+    width: 100%;
+    padding-top: 10px;
+    color: var(--color-gray-100);
+    font-size: 12px;
+    text-align: start;
+}
+.points-converter-bg .points-converter .topbar #user-scores strong {
+    font-size: 16px;
+    font-weight: 200;
+    color: var(--color-black);
+}
+.points-converter-bg .points-converter .bottombar button {
+    padding: 7.5px 20px;
+    border-radius: 5px;
+    width: 80%;
+}
+.points-converter-bg .points-converter .bottombar button#convert-arp-btn {
+    background-color: var(--color-gold);
+}
+.points-converter-bg .points-converter .bottombar button#donate-btn,
+.points-converter-bg .points-converter .bottombar button#donate-amount-btn,
+.points-converter-bg .points-converter .bottombar button#donateAmountBtn {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+.points-converter-bg .points-converter .bottombar button#close-converter-btn {
+    color: var(--color-blue);
+    font-weight: bold;
+    padding: 5px;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    /* Header */
+    header .pts-avail-section {
+        flex-flow: row wrap;
+    }
+    header .pts-avail-section .pts-avail-option {
+        width: 300px;
+    }
+    /* Invite Section */
+    main .user-activity .invite-section {
+        margin: 25px;
+        padding: 10px 25px;
+        border-radius: 10px;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main .user-activity .invite-section .inputs {
+        flex-flow: row;
+    }
+    main .user-activity .invite-section .inputs div {
+        width: 300px;
+    }
+    /* Points Table */
+    main .points-table .title {
+        width: 100%;
+    }
+    main .points-table .title .navigators {
+        justify-content: flex-start;
+        gap: 60px;
+    }
+    main .points-table .title h4 {
+        margin: 0px 0px 20px 0px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1230px) {
+    header.pts-dash-header {
+        background-image: url(../assets/svg/dashboard-wallpaper-desktop.svg);
+    }
+    header .pts-avail-section {
+        flex-flow: row;
+        justify-content: flex-start;
+    }
+    header .pts-avail-section .pts-avail-option {
+        height: 160px;
+        width: 25%;
+        justify-content: space-between;
+    }
+    header .pts-avail-section .pts-avail-option:nth-child(3) {
+        gap: 0px;
+    }
+
+    /* Main */
+    main {
+        display: flex;
+    }
+    main .user-activity .invite-section {
+        margin: 0px;
+        padding: 10px 25px;
+        border-radius: 10px;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main .user-activity .invite-section .inputs {
+        flex-flow: row;
+        
+    }
+    main .user-activity .invite-section .inputs div {
+        width: 300px;
+    }
+
+    /* Points Table */
+    main .points-table {
+        padding: 25px 0px;
+    }
+    main .points-table .title {
+        padding: 0px;
+    }
+    main .points-table .title .navigators {
+        border: none;
+    }
+    main .points-table .title h4 {
+        margin: 0px 0px 20px 0px;
+    }
+    main .points-table table thead {
+        display: table-header-group;
+    }
+    main .points-table table thead tr {
+        border-bottom: 1px solid var(--color-light-gray-100);
+        border-top: 1px solid var(--color-light-gray-100);
+    }
+    main .points-table table thead th {
+        text-align: start;
+    }
+    main .points-table table tbody {
+        overflow-y: scroll;
+    }
+    main .points-table table tbody tr {
+        display: table-row;
+    }
+    main .points-table table th, 
+    main .points-table table td {
+        padding: 15px 10px;
+    }
+    main .points-table table tbody tr td:nth-child(3),
+    main .points-table table tbody tr td:nth-child(4),
+    main .points-table table tbody tr td:nth-child(5) {
+        display: table-cell;
+        text-align: unset;
+    }
+    main .points-table table tbody tr td:nth-child(1) {
+        font-weight: normal;
+    }
+    main .points-table table tbody tr td:nth-child(5)::before {
+        content: "";
+    }
+
+    /* Points Converter */
+    .points-converter-bg .points-converter {
+        width: 35%;
+    }
+    .points-converter-bg .points-converter .topbar h3 {
+        font-size: 20px;
+    }
+    .points-converter-bg .points-converter .topbar .input-field {
+        width: 80%;
+    }
+    .points-converter-bg .points-converter .topbar #user-scores {
+        width: 80%;
+    }
+    .points-converter-bg .points-converter .bottombar button {
+        width: 60%;
+    }
+}

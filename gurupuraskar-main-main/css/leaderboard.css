@@ -1,0 +1,93 @@
+/* Mobile Styles */
+main .tab-nav {
+    display: none;
+}
+/* Leaderboard */
+.leaderboard {
+    background-color: var(--color-white);
+}
+.leaderboard .leaderboard-title,
+.options .options-title {
+    padding: 25px 20px;
+}
+.leaderboard .leaderboard-title h3,
+.options .options-title h3 {
+    font-weight: 200;
+}
+.leaderboard .leaderboard-scores .score {
+    padding: 10px 25px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 25px;
+}
+.leaderboard .leaderboard-scores .score.first {
+    background: var(--gradient-gold);
+}
+.leaderboard .leaderboard-scores .score.second {
+    background: var(--gradient-silver);
+}
+.leaderboard .leaderboard-scores .score.third {
+    background: var(--gradient-bronze);
+}
+.leaderboard .leaderboard-scores .score .score-details {
+    width: 100%;
+}
+.leaderboard .leaderboard-scores .score .score-details .row-1 p {
+    color: var(--color-gray-100);
+}
+
+/* Options */
+.options {
+    background-color: var(--color-white);       
+}
+.options .options-search {
+    margin: 0px 20px;
+    background-color: var(--color-light-gray);
+    padding: 10px;
+    gap: 20px;
+    border-radius: 10px;
+}
+.options .options-search input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.options .options-inputs {
+    padding: 20px;
+    gap: 25px;
+}
+.options .options-inputs input {
+    margin: 0;
+    color: var(--color-black);
+}
+.options .options-inputs button {
+    background-color: var(--color-black);
+    padding: 10px 25px;
+    border: none;
+    color: var(--color-white);
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    /* Leaderboard */
+    .leaderboard {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin: 15px;
+        border-radius: 10px;
+    }
+    .leaderboard .leaderboard-title h3,
+    .options .options-title h3 {
+        font-weight: bolder;
+    }
+
+    /* Options */
+    .options {
+        grid-column: 3/4;
+        margin: 15px;
+        border-radius: 10px;
+    }
+}

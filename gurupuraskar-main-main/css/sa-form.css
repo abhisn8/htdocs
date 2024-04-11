@@ -1,0 +1,158 @@
+/* Mobile Styles */
+main .sa-form {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 83vh;
+    padding: 25px;
+}
+main .sa-form li {
+    margin: 30px 15px;
+}
+main .sa-form .sa-form-title {
+    border-bottom: 1px dashed var(--color-black);
+    padding-bottom: 20px;
+}
+main .sa-form .sa-form-title p {
+    font-size: 16px;
+    font-weight: bolder;
+}
+main .sa-form .sa-buttons {
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-bright-green);
+}
+main .sa-form .sa-buttons button {
+    width: 60%;
+    background-color: var(--color-black);
+    padding: 7.5px 20px;
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+}
+main .sa-form .sa-form-questions {
+    padding: 0px 15px;
+    height: 70vh;
+    overflow-y: scroll;
+}
+main .sa-form .sa-form-questions .input-field p,
+main .sa-form .sa-form-questions .input-field input,
+main .sa-form .sa-form-questions .input-field .first {
+    margin-left: 15px;
+}
+main .sa-form .sa-form-questions .input-field .first {
+    margin-top: 15px;
+}
+main .sa-form .sa-form-questions .input-field button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-blue);
+    font-weight: bolder;
+    font-size: 16px;
+}
+main .sa-form .sa-form-questions .input-field .new-choice-input {
+    display: none;
+}
+main .sa-form .sa-form-questions .input-field .add-new-choice-btn {
+    display: none;
+}
+main .sa-form .sa-form-questions p {
+    font-size: 16px;
+    color: var(--color-dimgray-100);
+}
+main .sa-form .sa-form-questions input[type="text"] {
+    border-bottom: 1px solid var(--color-light-gray-100);
+}
+main .sa-form .sa-form-questions input[type="checkbox"] {
+    width: min-content;
+    height: min-content;
+    margin: 0px;
+}
+
+/* Form Editor */
+main .form-editor {
+    width: 100%;
+    padding: 25px 15px;
+    background-color: var(--color-white);
+}
+main .form-editor .fe-title {
+    padding: 0px 10px;
+}
+main .form-editor .fe-title h3 {
+    font-size: 16px;
+}
+main .form-editor .fe-title p {
+    font-size: 14px;
+}
+main .form-editor .fe-buttons {
+    padding-top: 25px;
+}
+main .form-editor .fe-buttons button {
+    gap: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+main .form-editor .fe-buttons button    .form-btn-logo {
+    width: 31px;
+    height: 31px;
+    border-radius: 5px;
+}
+main .form-editor .fe-buttons button:nth-child(1) {
+    background-color: var(--color-dim-brown);
+}
+main .form-editor .fe-buttons button:nth-child(1) .form-btn-logo {
+    background-color: rgba(255, 200, 59, 1);
+}
+main .form-editor .fe-buttons button:nth-child(2) {
+    background-color: var(--color-dim-blue);
+}
+main .form-editor .fe-buttons button:nth-child(2) .form-btn-logo {
+    background-color: rgba(58, 120, 240, 1);
+}
+main .form-editor .fe-buttons button:nth-child(3) {
+    background-color: var(--color-dim-green);
+}
+main .form-editor .fe-buttons button:nth-child(3) .form-btn-logo {
+    background-color: rgba(75, 162, 116, 1);
+}
+main .form-editor .fe-buttons button:nth-child(4) {
+    background-color: var(--color-dim-orange);
+}
+main .form-editor .fe-buttons button:nth-child(4) .form-btn-logo {
+    background-color: rgba(252, 125, 65, 1);
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    main .tab-nav {
+        display: none;
+    }
+
+    /* Self assessment form */
+    main .sa-form {
+        height: 93vh;
+        margin: 25px 0px;
+        grid-column: 2/3;
+        grid-row: 1/5;
+        border-radius: 10px;
+    }
+    main .sa-form .sa-buttons {
+        justify-content: flex-end;
+    }
+    main .sa-form .sa-buttons button {
+        width: 30%;
+    }
+    
+    /* Form Editor */
+    main .form-editor {
+        margin: 25px 0px 25px 10px;
+        grid-column: 3/4;
+        grid-row: 1/5;
+        border-radius: 10px;
+    }
+}

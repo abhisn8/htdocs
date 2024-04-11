@@ -1,0 +1,147 @@
+/* Mobile Styles */
+main .settings {
+    width: 100%;
+    background-color: var(--color-white);
+    
+}
+main .settings .settings-title {
+    display: none;
+}
+main .settings h3 {
+    font-size: 16px;
+}
+main .settings .main-settings {
+    width: 100%;
+    padding: 20px 25px;
+}
+main .settings .main-settings .edit-buttons {
+    margin-top: 30px;
+    gap: 10px;
+}
+main .settings .main-settings .edit-buttons .edit-btn,
+main .settings .main-settings .edit-buttons .edit-price-btn {
+    width: 100%;
+    background-color: var(--color-light-gray);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+main .settings .main-settings .edit-buttons h4 {
+    font-size: 14px;
+    font-weight: 200;
+    color: var(--color-dimgray-100);
+}
+main .settings .main-settings .edit-buttons .edit-btn:nth-child(1) h4::before {
+    content: "Date: ";
+    font-weight: 900;
+    color: var(--color-black);
+}
+main .settings .main-settings .edit-buttons .edit-btn:nth-child(2) h4::before {
+    content: "Time: ";
+    font-weight: 900;
+    color: var(--color-black);
+}
+main .settings .main-settings .edit-buttons .edit-price-btn h4::before {
+    content: "Registeration Fee: ₹";
+    font-weight: 900;
+    color: var(--color-black);
+}
+main .settings .main-settings .edit-buttons.contact-edits .edit-btn:nth-child(1) h4::before {
+    content: "Address: ";
+    font-weight: 900;
+    color: var(--color-black);
+}
+main .settings .main-settings .edit-buttons.contact-edits .edit-btn:nth-child(2) h4::before {
+    content: "Mobile: ";
+    font-weight: 900;
+    color: var(--color-black);
+}
+main .settings .main-settings .edit-buttons.contact-edits .edit-btn:nth-child(3) h4::before {
+    content: "Website: ";
+    font-weight: 900;
+    color: var(--color-black);
+}
+main .settings .main-settings .edit-buttons.contact-edits .edit-btn:nth-child(4) h4::before {
+    content: "Email: ";
+    font-weight: 900;
+    color: var(--color-black);
+}
+main .settings .main-settings .edit-buttons .edit-btn:nth-child(3) {
+    height: 150px;
+}
+main .settings .main-settings .edit-buttons .edit-btn:nth-child(3) h4 {
+    font-weight: bolder;
+    color: var(--color-black);
+}
+main .settings .main-settings .edit-buttons .edit-btn:nth-child(3) .row-2 h4 {
+    font-size: 14px;
+    font-weight: 200;
+    color: var(--color-dimgray-100);
+}
+main .settings .main-settings .edit-buttons .edit-btn button,
+main .settings .main-settings .edit-buttons .edit-price-btn button {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: bolder;
+    color: var(--color-blue);
+}
+main .main-settings .app-settings-title {
+    margin: 35px 0px 5px 0px;
+}
+main .main-settings .app-setting .app-setting-title,
+main .main-settings .app-setting .app-setting-note {
+    color: var(--color-dimgray-100);
+    font-weight: 200;
+    font-size: 14px;
+}
+main .main-settings .app-setting .app-setting-note {
+    color: var(--color-black);
+    margin: 15px 0px;
+}
+main .main-settings .app-setting ul li {
+    margin-left: 20px;
+    font-size: 14px;
+    color: var(--color-dimgray-100);
+}
+main .main-settings .app-setting button, #save-about-us-content, #save-gallery-content {
+    margin: 25px 0px;
+    width: 155px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: var(--color-white);
+    font-weight: bolder;
+    border: none;
+}
+main .main-settings .app-setting button.lock-btn, #save-about-us-content, #save-gallery-content {
+    background-color: var(--color-blue);
+}
+main .main-settings .app-setting button.reset-btn {
+    background-color: var(--color-bright-red);
+}
+
+.edit-popups {
+    display: none;
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    main .settings .settings-title {
+        display: flex;
+        width: 100%;
+        padding: 25px;
+        border-bottom: 1px solid var(--color-light-gray-100);
+    }
+    main .tab-nav {
+        display: none;
+    }
+    main .settings {
+        border-radius: 10px;
+        margin: 10px 25px 10px 0px;
+        grid-column: 2/5;
+    }
+
+    main .settings .main-settings .edit-buttons .edit-btn:nth-child(3) {
+        height: 150px;
+    }
+}

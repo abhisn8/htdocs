@@ -1,0 +1,183 @@
+/* Mobile Styles */
+main .donations {
+    background-color: var(--color-light-gray);
+}
+main .donations .donations-topbar {
+    border-bottom: 1px solid var(--color-light-gray-100);
+}
+main .donations .donations-topbar h3 {
+    display: none;
+}
+main .donations .donations-topbar .searchbar {
+    margin: 10px 0px 25px 0px;
+    background-color: var(--color-white);
+    padding: 10px;
+    gap: 15px;
+}
+main .donations .donations-topbar .searchbar input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+main .donations .donations-topbar .navigator {
+    overflow-x: scroll;
+    gap: 35px;
+    margin-left: 35px;
+}
+main .donations .donations-topbar .navigator::-webkit-scrollbar {
+    display: none;
+}
+main .donations .donations-topbar .navigator button {
+    font-weight: bolder;
+    font-size: 16px;
+    color: var(--color-gray-100);
+    background-color: transparent;
+    border: none;
+    padding-bottom: 5px;
+}
+main .donations .donations-topbar .navigator button.selected {
+    border-bottom: 1px solid var(--color-black);
+    color: var(--color-black);
+}
+
+/* Donations Table */
+main table {
+    width: 95.5%;
+}
+main table thead {
+    display: none;
+}
+main table thead tr td {
+    font-weight: bolder;
+    font-size: 16px;
+}
+main table tbody tr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    margin: 15px 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-gray-100);
+}
+main table tbody tr td:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+main table tbody tr td:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    color: var(--color-gray-100);
+}
+main table tbody tr td:nth-child(3) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: end;
+    color: var(--color-gray-100);
+}
+main table tbody tr td:nth-child(3)::before {
+    content: "Ref:";
+}
+main table tbody tr td:nth-child(4) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-weight: bold;
+}
+main table tbody tr td:nth-child(5) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: end;
+}
+main table tbody tr td:nth-child(6) {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: end;
+}
+main table tbody tr td h4:nth-child(2) {
+    display: none;
+}
+main table tbody tr td.success {
+    color: var(--color-bright-green);
+}
+main table tbody tr td.pending {
+    color: var(--color-orange);
+}
+main table tbody tr td.fail {
+    color: var(--color-bright-red);
+}
+
+tbody.donation-table {
+    display: none;
+}
+tbody.donation-table.all {
+    display: contents;
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    main .tab-nav {
+        display: none;
+    }
+    
+    /* Donations */
+    main .donations {
+        background-color: var(--color-white);
+        grid-column: 2/4;
+        margin: 15px;
+        border-radius: 10px;
+    }
+    main .donations .donations-topbar {
+        padding: 25px 25px 0px 25px;
+    }
+    main .donations .donations-topbar h3 {
+        display: block;
+    }
+    main .donations .donations-topbar .searchbar {
+        margin: 0;
+        background-color: var(--color-light-gray);
+        width: 40%;
+        align-self: flex-end;
+        border-radius: 10px;
+    }
+    main .donations .donations-topbar .navigator {
+        margin: 0;
+    }
+    main table {
+        margin: 25px;
+    }
+    main table thead {
+        display: table-header-group;
+        border-radius: 5px;
+        background-color: var(--color-light-gray);
+    }
+    main table thead tr td {
+        padding: 15px 20px;
+    }
+    main table tbody tr {
+        display: table-row;
+        border-bottom: 1px solid var(--color-light-gray-100);
+    }
+    main table tbody tr td {
+        padding: 20px;
+    }
+    main table tbody tr td:nth-child(2) {
+        display: none;
+    }
+    main table tbody tr td h4:nth-child(2) {
+        display: block;
+        color: var(--color-gray-100);
+        font-weight: 200;
+    }
+    main table tbody tr td:nth-child(3),
+    main table tbody tr td:nth-child(5),
+    main table tbody tr td:nth-child(6) {
+        text-align: start;
+    }
+    main table tbody tr td:nth-child(3) {
+        color: var(--color-black);
+    }
+    main table tbody tr td:nth-child(3)::before {
+        content: "";
+    }
+}

@@ -1,0 +1,235 @@
+/* Mobile Styles */
+body {
+    background-color: var(--color-whitesmoke-200);
+}
+
+/* Mobile specific styles */
+.back-btn-desk {
+    display: none;
+}
+
+.register-title {
+    display: none;
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 15px;
+}
+
+.navbar .language-dialog {
+    width: 20%;
+    background-color: var(--color-whitesmoke-200);
+    padding: 10px;
+    border-radius: 10px;
+}
+.navbar .language-dialog .dialog-logo {
+    gap: 10px;
+}
+.navbar .language-dialog .language-dialog-name {
+    display: none;
+    font-weight: 200;
+}
+
+.back-btn-mobile {
+    padding: 10px 15px;
+    gap: 15px;
+    background-color: var(--color-bright-green);
+}
+
+.back-btn-mobile h5 {
+    color: var(--color-white);
+}
+
+.onboarding-page-navigator {
+    /* padding: 15px; */
+    overflow-x: scroll;
+    gap: 10px;
+}
+.onboarding-page-navigator::-webkit-scrollbar {
+    display: none;
+}
+.onboarding-page-navigator .page-number {
+    gap: 10px;
+}
+
+/* Form */
+.input-form {
+    padding: 30px 20px;
+    gap: 30px;
+}
+
+.onboarding-instruction {
+    padding-top: 45px;
+    font-size: 16px;
+}
+
+.onboarding-price-tag {
+    font-size: 45px;
+}
+
+.onboarding-feature {
+    width: 100%;
+    padding: 25px 20px;
+    gap: 15px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+
+.onboarding-feature h5 {
+    font-weight: 200;
+    color: var(--color-gray-100);
+    font-size: 14px;
+}
+
+.input-field .input-field-title h5, .onboarding-instruction {
+    font-weight: 200;
+}
+
+.input-field .input-field-title h5:nth-child(2) {
+    color: var(--color-bright-red);
+}
+.input-field input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    background: none;
+    border: none;
+    caret-color: var(--color-bright-green);
+    border-bottom: 1.5px solid black;
+}
+
+.input-field input:focus {
+    border-bottom: 2px solid var(--color-bright-green);
+}
+
+.input-form .check-input {
+    gap: 10px;
+}
+.input-form .check-input h5 {
+    font-weight: 200;
+}
+
+.input-form .form-buttons {
+    gap: 25px;
+}
+
+.input-form a {
+    color: var(--color-);
+    text-decoration: none;
+}
+
+.input-form .form-buttons .register-btn {
+    width: 35%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--color-black);
+    outline: none;
+    border: none;
+}
+
+.input-form .form-buttons .register-btn h4 {
+    color: var(--color-white);
+}
+
+.input-form .validate-btn h5 {
+    font-weight: 200;
+}
+
+.input-form .validate-btn {
+    gap: 15px;
+}
+
+.input-form .user-img {
+    gap: 15px;
+}
+.input-form .user-img .circle {
+    border-radius: 50%;
+    min-height: 95px;
+    min-width: 95px;
+    background-color: var(--color-gray-100);
+}
+.input-form .user-img #user-img-input {
+    /* width: 50%; */
+    border: none;
+}
+.input-form .form-buttons {
+    display: flex;
+    justify-content: center;
+}
+.input-form .form-buttons button {
+    width: 60%;
+}
+
+/* Banner image */
+.banner-img {
+    display: none;
+}
+
+/* Desktop Styles */
+@media(min-width: 1024px) {
+    /* Main Container of the page. */
+    .body {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 4% 96%;
+    }
+    /* Back button for desktop. */
+    .back-btn-desk {
+        display: flex;
+        flex-flow: row;
+        align-items: start;
+        justify-content: center;
+        padding: 45px 15px;
+        background-color: var(--color-bright-green);
+    }   
+    /* Hides back button of mobile. */
+    .back-btn-mobile {
+        display: none;
+    }
+    
+    .register-title {
+        display: block;
+    }
+
+    .navbar .language-dialog {
+        width: 15%;
+    }
+
+    /* Container of form and image. */
+    .container {
+        display: grid;
+        padding: 25px 35px;
+        grid-template-columns: 49% 49%;
+        gap: 0px 55px;
+    }
+    .container header {
+        grid-column: 1/3;
+    }
+    .container .input-form {
+        grid-column: 1/2;
+    }
+    .container .banner-img {
+        width: 85%;
+        display: block;
+        grid-column: 2/3;
+    }
+    .container .banner-img img {
+        width: 115%;
+    }
+    .container .navbar .language-dialog .language-dialog-name {
+        display: block;
+    }
+
+    /* Form styles */
+    .input-form .form-buttons {
+        justify-content: start;
+    }
+    .input-form .form-buttons button {
+        width: 50%;
+    }
+
+    .onboarding-feature {
+        width: 390px;
+    }
+}

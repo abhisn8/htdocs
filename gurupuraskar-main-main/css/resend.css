@@ -1,0 +1,9 @@
+.resend-otp-btn {
+    background-color: transparent;
+    color: rgb(58, 120, 240);
+    font-weight: 600;
+    text-wrap: nowrap;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}

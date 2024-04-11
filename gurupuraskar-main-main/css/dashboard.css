@@ -1,0 +1,353 @@
+/* Tool tips styles */
+.toolTipHover {
+    position: relative;
+}
+.toolTip {
+    display: none;
+    position: absolute;
+    text-wrap: nowrap;
+    background-color: var(--color-white-50);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+#scoreToolTip {
+    left: 35px;
+    top: -6.5px;
+}
+#requiredArpToolTip {
+    right: 25px;
+}
+#reviewToolTip {
+    top: -45px;
+}
+#selfieToolTip {
+    left: 100px;
+}
+/* Event details popup styles */
+#eventDetailsPopup .titles {
+    font-weight: 500;
+}
+#eventDetailsPopup button {
+    margin-top: 25px;
+}
+/* Alert Bar Styles */
+.alert-bar {
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(229, 5, 5);
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+/* Dashboard Styles */
+ul {
+    list-style: none;
+}
+button {
+    background: none;
+    border: none;
+}
+#google_translate_element {
+    display: none;
+}
+.sidebar-bg #google_translate_element {
+    display: block;
+}
+
+/* Mobile Styes */
+/* Navbar */
+header {
+    padding: 30px 25px 10px 25px;
+    background-image: url(../assets/svg/dashboard-wallpaper-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header .desktop-controls {
+    display: none;
+}
+header .dash-nav {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-black);
+}
+header .dash-nav .controls .notifications-btn .circle {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 15px;
+    width: 15px;
+    color: var(--color-white);
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: var(--color-bright-red);
+}
+
+header .dash-info {
+    padding: 20px 0px;
+}
+header .dash-info .user-address h4 {
+    color: var(--color-gray-100);
+}
+header .dash-info .dash-score button.score-btn {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--color-white-50);
+}
+header .controls .language-dialog, header .controls .logout-btn {
+    display: none;
+}
+/* Main Body Styles */
+/* Reviews */
+main .dashboard-reviews {
+    padding: 30px 25px;
+    background-color: var(--color-light-gray);
+    justify-content: center;
+    flex-flow: column;
+    align-items: start;
+    gap: 25px;
+}
+main .dashboard-reviews .reviews-title {
+    text-transform: uppercase;
+}
+main .dashboard-reviews .reviews-container {
+    width: 100%;
+    flex-flow: column;
+    gap: 15px;
+}
+main .dashboard-reviews .reviews-container .review {
+    width: 100%;
+    padding: 30px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+main .dashboard-reviews .reviews-container .review .review-panel {
+    gap: 15px;
+}
+main .dashboard-reviews .reviews-container .review .review-info h3 {
+    color: var(--color-gray-100);
+}
+main .dashboard-reviews .reviews-container .review button {
+    padding: 10px 15px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-radius: 7.5px;
+    height: 50px;
+}
+/* Leaderboard */
+.dashboard-leaderboard {
+    background-color: rgba(255, 249, 240, 1);
+}
+.dashboard-leaderboard #district-leaderboard {
+    display: none;
+}
+.dashboard-leaderboard .leaderboard-title {
+    padding: 25px;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+.dashboard-leaderboard .leaderboard-title .shifter h3 {
+    font-weight: 200;
+    font-size: 18px;
+}
+.dashboard-leaderboard .leaderboard-title .shifter h3.selected {
+    border-bottom: 3px solid var(--color-black);
+    font-weight: bold;
+}
+
+.dashboard-leaderboard .leaderboard-scores {
+    height: 320px;
+    overflow-y: scroll;
+}
+.dashboard-leaderboard .leaderboard-scores .score {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+.dashboard-leaderboard .leaderboard-scores .score.first {
+    background: var(--gradient-gold);
+}
+.dashboard-leaderboard .leaderboard-scores .score.second {
+    background: var(--gradient-silver);
+}
+.dashboard-leaderboard .leaderboard-scores .score.third {
+    background: var(--gradient-bronze);
+}
+.dashboard-leaderboard .leaderboard-scores .score .score-number {
+    grid-column: 1/2;
+    text-align: center;
+}
+.dashboard-leaderboard .leaderboard-scores .score .score-details {
+    grid-column: 2/3;
+}
+
+/* Sidebar */
+.sidebar-bg {
+    display: none;
+    background-color: rgb(0 0 0 / 68%);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    position: fixed;
+}
+.sidebar {
+    padding: 35px;
+    position: fixed;
+    height: 100vh;
+    width: 85%;
+    background-color: var(--color-white);
+    right: 0;
+}
+.sidebar .top .language-dialog {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 10px;
+    border-radius: 10px;
+}
+.sidebar .top ul li {
+    margin: 20px 0px;
+}
+.sidebar .bottom button {
+    width: 100%;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: var(--color-light-red);
+    color: var(--color-bright-red);
+}
+
+/* Popup form */
+.popup-form-bg [id*="close-btn"] {
+    cursor: pointer;
+}
+.popup-form-bg .popup-form .form input:disabled {
+    width: 100%;
+    border-bottom: 1px solid var(--color-light-gray-100);
+}
+.popup-form-bg .popup-form .form .form-inputs-list p {
+    font-size: 14px;
+    color: var(--color-gray-100);
+    margin-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-light-gray-100);
+}
+.popup-form .popup-bottom-bar .form-buttons {
+    flex-flow: column-reverse;
+}
+.popup-form .popup-bottom-bar .form-buttons .point-input {
+    width: 60%;
+    background-color: var(--color-white);
+    padding: 7.5px 10px;
+    border-radius: 7.5px;
+}
+.popup-form .popup-bottom-bar .form-buttons .point-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    main .dashboard-reviews .reviews-container {
+        flex-flow: row;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1230px) {
+    #google_translate_element {
+        display: block;
+        width: 200px;
+    }
+    /* Navbar */
+    header {
+        padding: 30px 100px 10px 100px;
+        background-image: url(../assets/svg/dashboard-wallpaper-desktop.svg);
+    }
+    header .dash-links {
+        gap: 60px;
+    }
+    header .desktop-controls {
+        display: flex;
+        gap: 35px;
+    }
+    header .desktop-controls li a {
+        text-decoration: none;
+        color: var(--color-black);
+    }
+    header .desktop-controls li.selected {
+        border-bottom: 3px solid var(--color-black);
+    }
+    header .controls .hamburger-btn {
+        display: none;
+    }
+    header .controls .language-dialog, header .controls .logout-btn {
+        height: 46.5px;
+        display: flex;
+        padding: 10px 25px;
+        background-color: var(--color-white-50);
+        border-radius: 10px;
+        width: 200px;
+    }
+    header .dash-nav .controls .notifications-btn .circle {
+        top: -4px;
+    }
+    /* Main body */
+    main {
+        padding: 20px 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    /* Reviews and Leaderboard */
+    main .dashboard-reviews .reviews-title {
+        display: none;
+    }
+    main .dashboard-reviews, .dashboard-leaderboard {
+        border-radius: 10px;
+    }
+    main .dashboard-reviews .reviews-container {
+        flex-flow: row;
+        gap: 20px;
+    }
+    main .dashboard-reviews .reviews-container .review {
+        gap: 40px;
+    }
+    main .dashboard-reviews .reviews-container .review .review-panel {
+        gap: 25px;
+    }
+    main .dashboard-reviews .reviews-container .review .review-title h3 {
+        font-size: xx-large;
+    }
+    .dashboard-leaderboard .leaderboard-title {
+        flex-flow: row;
+        justify-content: space-between;
+    }
+
+    /* Popup form */
+    .popup-form {
+        width: 40%;
+        border-radius: 10px;
+    }
+    .popup-form .popup-bottom-bar {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .popup-form .popup-bottom-bar .form-buttons {
+        flex-flow: row;
+        justify-content: end;
+    }
+    .popup-form .popup-bottom-bar .form-buttons .point-input {
+        width: 50%;
+    }
+}

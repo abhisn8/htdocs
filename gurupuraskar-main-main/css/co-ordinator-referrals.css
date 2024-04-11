@@ -1,0 +1,89 @@
+/* Mobile Styles */
+main .tab-nav {
+    display: none;
+}
+main .invite-section {
+    background-color: var(--color-white);
+    padding: 10px;
+}
+main .invite-section .invite-link {
+    background-color: var(--color-light-gray);
+    padding: 10px;
+    border-radius: 10px;
+}
+main .invite-section .invite-link input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+main .invite-section .invite-link button {
+    font-weight: 600;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    padding: 7.5px;
+    border: none;
+    border-radius: 5px;
+}
+main .tel-numbers {
+    padding: 25px;
+    background-color: var(--color-white);
+    gap: 20px;
+    margin-top: 10px;
+}
+main .tel-numbers .tel-num p:nth-child(2) {
+    color: var(--color-gray-100);
+}
+
+/* Points */
+main .points-avail {
+    background-color: var(--color-white);
+    padding: 25px;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+main .points-avail .pts-avail-option {
+    background-color: var(--color-whitesmoke-200);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+}
+main .points-avail .referral-code {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+main .points-avail .referral-code .copy-btn {
+    color: var(--color-white);
+    background-color: var(--color-bright-green);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    main .tab-nav {
+        display: flex;
+    }
+    main .invite-section {
+        grid-column: 2/3;
+        border-radius: 10px;
+    }
+    main .tel-numbers {
+        grid-column: 2/3;
+        background-color: var(--color-white);
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    /* Points */
+    main .points-avail {
+        grid-column: 3/4;
+        grid-row: 1/5;
+        margin: 20px;
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,93 @@
+/* Dashboard Success Popup Styles */
+/* Mobile Styles */
+.success-popup-bg {
+    display: none;
+    background-color: rgb(0 0 0 / 68%);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.success-popup {
+    margin: 90px 25px auto 25px;
+    padding: 75px 0px;
+    gap: 130px;
+    background-color: var(--color-white);
+}
+.success-popup .topbar {
+    align-self: center;
+}
+.success-popup .topbar img {
+    width: 30%;
+}
+.success-popup .topbar h1 {
+    font-size: xx-large;
+}
+.success-popup .topbar h4 {
+    text-align: center;
+}
+/* Bottombar */
+.success-popup .bottombar {
+    padding: 0px 60px;
+}
+.success-popup .bottombar button {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 7.5px 10px;
+    border-radius: 7.5px;
+}
+.success-popup .bottombar h4 {
+    color: var(--color-gray-100);
+}
+.success-popup .bottombar a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Medium Styles */
+@media (min-width: 500px) {
+    .success-popup .bottombar button {
+        width: 65%;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    .success-popup .bottombar {
+        width: 60%;
+    }
+    .success-popup .bottombar button {
+        width: 125%;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .success-popup-bg {
+        background-color: rgb(0 0 0 / 68%);
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 100px;
+    }
+    .success-popup {
+        margin: 0;
+        width: 30%;
+        height: fit-content;
+        border-radius: 10px;
+        padding: 35px;
+        gap: 150px;
+    }
+    .success-popup .topbar img {
+        width: 45%;
+    }
+    .success-popup .bottombar {
+        width: 100%;
+        padding: 0px;
+    }
+    .success-popup .bottombar button {
+        width: 75%;
+    }
+}

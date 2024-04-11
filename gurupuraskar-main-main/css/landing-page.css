@@ -1,0 +1,176 @@
+/* Mobile Styles */
+.success-popup #printReceipt {
+    border: none;
+    outline: none;
+}
+.success-popup #printReceipt h4 {
+    color: #fff;
+}
+.success-popup #closePaySuccessBtn {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    outline: none;
+    width: 10%;
+    font-weight: 900;
+}
+/* Header */
+body {
+    background-color: var(--color-whitesmoke-200);
+}
+header {
+    padding: 25px;
+}
+.navbar .language-dialog {
+    width: 20%;
+    background-color: var(--color-whitesmoke-200);
+    padding: 10px;
+    border-radius: 10px;
+}
+.navbar .language-dialog .dialog-logo {
+    gap: 10px;
+}
+.navbar .language-dialog .language-dialog-name {
+    display: none;
+    font-weight: 200;
+}
+
+/* Main */
+main {
+    padding: 50px 25px;
+}
+main .main-title {
+    gap: 25px;
+}
+main .main-title .buttons {
+    justify-content: center;
+    gap: 20px;
+}
+main .main-title .buttons a {
+    width: 45%;
+    background-color: var(--color-white);
+    padding: 5px 9.5px 5px 25px;
+    text-decoration: none;
+    border-radius: 0px 27px 27px 27px;
+    box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.05);
+    color: var(--color-black);
+    justify-content: space-between;
+}
+main .main-title .buttons a h4 {
+    font-size: 14px;
+}
+main .banner-img {
+    margin-top: 50px;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-black);
+    padding: 30px 25px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    color: var(--color-white);
+}
+footer .end-lines {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+footer h5 {
+    text-align: center;
+}
+.foot-links {
+    padding: 25px;
+    gap: 45px;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    /* Navbar */
+    .navbar .language-dialog .language-dialog-name {
+        display: block;
+    }
+    /* Main */
+    main .banner-img {
+        width: 75%;
+        margin-left: 75px;
+    }
+    /* Footer */
+    footer {
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    footer .end-lines {
+        flex-flow: row;
+        gap: 40px;
+    }
+    .foot-links {
+        justify-content: flex-start;
+        padding: 25px 100px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    main .main-title .buttons {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    main .main-title .buttons a {
+        width: -moz-fit-content;
+        width: fit-content;
+        gap: 35px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    /* Header */
+    header {
+        padding: 25px 100px;
+    }
+    /* Main */
+    main {
+        padding: 0px 100px 25px 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main .main-title h1 {
+        font-size: 55px;
+    }
+    main .banner-img {
+        margin: 0px;
+        width: 50%;
+    }
+    /* Footer */
+    footer {
+        padding: 25px 100px;
+    }
+
+    /* Buttons */
+    main .main-title {
+        gap: 45px;
+    }
+    main .main-title .buttons {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    main .main-title .buttons a {
+        /* width: 30%; */
+        padding-left: 50px;
+        gap: 35px;
+    }
+    main .main-title .buttons a h4 {
+        font-size: 16px;
+    }
+    .success-popup {
+        width: 50%;
+    }
+}
