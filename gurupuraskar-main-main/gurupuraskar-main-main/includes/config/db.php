@@ -2,9 +2,9 @@
 <?php session_start(); ?>
 <?php
 $host = "localhost";
-$dbname = "gurupuraskar";
-$user = "root";
-$pass = "";
+$dbname = "u857015662_gurupuraskar";
+$user = "u857015662_gurupuraskar";
+$pass = "Gurupuraskar999";
 $dsn = "mysql:host=$host;dbname=$dbname";
 
 try {

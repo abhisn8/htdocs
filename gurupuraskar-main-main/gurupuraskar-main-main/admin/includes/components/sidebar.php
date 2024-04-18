@@ -35,7 +35,7 @@
                 DELIMETER;
             }
         }
-        ?> 
+        ?>
         </div>
     </div>
     <form method="POST" class="bottombar full-width">
