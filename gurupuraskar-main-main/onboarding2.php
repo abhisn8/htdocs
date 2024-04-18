@@ -105,7 +105,9 @@ if (isset($_POST['payAmount'])) {
 <body>
     <section class="body">
         <aside class="back-btn-desk">
+        <a href="onboarding1.php?back=true" class="back-btn-desk">
             <img src="./assets/svg/back-btn.svg" id="back-btn" alt="Back button.">
+        </a>
         </aside>
         <section class="container">
             <!-- Navbar for onboarding pages. -->
@@ -173,7 +175,6 @@ if (isset($_POST['payAmount'])) {
     </section>
 </body>
 <script LANGUAGE=JScript RUNAT=Server src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-<?php include "./includes/components/script.php"; importScripts(['onboarding2']); ?>
 <script>
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');

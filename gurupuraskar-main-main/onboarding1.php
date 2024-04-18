@@ -89,6 +89,8 @@ if (isset($_POST['continue-btn']) && isset($_GET['back']) && $_GET['back'] === "
     $kgid = returnIfFilled($_POST['user-kgid']); // Gets the user's KGID number.
     $ref = returnIfFilled($_POST['user-referral']); // Gets the referral code.
 
+    $userId = generateUserId($name, getUserPhone($userCode));
+
     move_uploaded_file($_FILES['user-img']['tmp_name'], "user-data/" . $userCode . ".jpg");
 
     $stmt = $connection->prepare(
@@ -112,7 +114,8 @@ if (isset($_POST['continue-btn']) && isset($_GET['back']) && $_GET['back'] === "
         `institute_taluk` = :s18,
         `institute_pincode` = :s19,
         `user_identity` = :s20,
-        `user_kgid` = :s21 WHERE user_code = :s22"
+        `user_kgid` = :s21,
+        `user_id` = :s23 WHERE user_code = :s22"
     );
     $stmt->bindValue(":s1", $name);
     $stmt->bindValue(":s2", $email);
@@ -136,6 +139,7 @@ if (isset($_POST['continue-btn']) && isset($_GET['back']) && $_GET['back'] === "
     $stmt->bindValue(":s20", $pan);
     $stmt->bindValue(":s21", $kgid);
     $stmt->bindValue(":s22", $userCode);
+    $stmt->bindValue(":s23", $userId);
     $stmt->execute();
 
     redirect("dashboard");
@@ -164,6 +168,8 @@ if (isset($_POST['continue-btn']) && isset($_GET['back']) && $_GET['back'] === "
     $kgid = returnIfFilled($_POST['user-kgid']); // Gets the user's KGID number.
     $ref = returnIfFilled($_POST['user-referral']); // Gets the referral code.
 
+    $userId = generateUserId($name, getUserPhone($userCode)); // User ID of the user
+
     move_uploaded_file($_FILES['user-img']['tmp_name'], "user-data/" . $userCode . ".jpg");
 
     $userRef = generateUserReferalCode($name, getUserPhone($userCode)); // Generates a referral code.
@@ -174,8 +180,8 @@ if (isset($_POST['continue-btn']) && isset($_GET['back']) && $_GET['back'] === "
         `user_gender`, `user_age`, `user_res_address`, `user_state`, `user_district`,
         `user_taluk`, `user_pincode`, `user_education`, `institute_id`, `institute_name`,
         `institute_type`, `user_designation`, `institute_address`, `institute_state`,
-        `institute_district`, `institute_taluk`, `institute_pincode`, `user_identity`, `user_referral_code`, `user_kgid`)
-        VALUES (:s1, :s2, :s3, :s4, :s5, :s6, :s7, :s8, :s9, :s10, :s11, :s12, :s13, :s14, :s15, :s16, :s17, :s18, :s19, :s20, :s21, :s22, :s23) "
+        `institute_district`, `institute_taluk`, `institute_pincode`, `user_identity`, `user_referral_code`, `user_kgid`, `user_id`)
+        VALUES (:s1, :s2, :s3, :s4, :s5, :s6, :s7, :s8, :s9, :s10, :s11, :s12, :s13, :s14, :s15, :s16, :s17, :s18, :s19, :s20, :s21, :s22, :s23, :s24) "
     );
     $stmt->bindValue(":s1", $userCode);
     $stmt->bindValue(":s2", $name);
@@ -200,6 +206,7 @@ if (isset($_POST['continue-btn']) && isset($_GET['back']) && $_GET['back'] === "
     $stmt->bindValue(":s21", $pan);
     $stmt->bindValue(":s22", $userRef);
     $stmt->bindValue(":s23", $kgid);
+    $stmt->bindValue(":s24", $userId);
     $stmt->execute();
 
     if (getReferralUserCode($ref) !== false) {
@@ -474,7 +481,7 @@ if (isset($_POST['continue-btn']) && isset($_GET['back']) && $_GET['back'] === "
                 </div>
 
                 <div class="user-img full-width flex justify-start align-center">
-                    <div class="circle"></div>
+                    <!-- <div class="circle"></div> -->
                     <div id="upload-unit" class="input-field full-width flex column align-start gap-5px">
                         <span class="input-field-title flex full-width justify-start gap-10px">
                             <h5>Upload selfie</h5>

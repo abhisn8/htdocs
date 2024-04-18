@@ -1,4 +1,9 @@
 <?php
+// Function for generating the user ID from username and phone.
+function generateUserId($name, $phone) {
+    return substr($name, 0, 5) . substr($phone, 5);
+}
+
 // Function for logging the user in.
 function loginUser ($code) {
     if (userExists($code) && !isUserBlocked($code)) {

@@ -234,7 +234,7 @@ if (isset($_POST['submit-user-info'])) {
 
                 foreach ($result as $row) {
                     $userCode = $row['user_code'];
-                    $userNameGenerated = generatePointUserName($userCode);
+                    $userNameGenerated = $row['user_id'];
                     $userName = getUserName($row['user_code']);
                     $userData = ucwords($row['user_designation']) . ", " . $row['user_district'];
 

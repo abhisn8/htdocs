@@ -60,9 +60,12 @@ if (!isAdminLoggedIn()) {
             <div class="options-title">
                 <h3>OPTIONS</h3>
             </div>
-            <form method="GET" class="options-search flex justify-start align-center">
-                <img src="./../assets/svg/search-icon.svg" alt="">
-                <input type="search" name="q" placeholder="Search by name or ID">
+            <form method="GET" class="search-name-form flex justify-start align-center gap-20px" style="padding-right: 20px;">
+                <div class="options-search flex justify-start align-center full-width">
+                    <img src="./../assets/svg/search-icon.svg" alt="">
+                    <input type="search" name="q" placeholder="Search by name or ID" required>
+                </div>
+                <button name="search-name" type="submit" id="download-csv">Search</button>
             </form>
             <form method="GET" id="leaderboard-form" class="options-inputs flex column justify-start align-start">
                 <div class="input-field full-width flex column align-start gap-5px">
@@ -108,19 +111,18 @@ if (!isAdminLoggedIn()) {
                 if (isset($_GET['q']) && !empty($_GET['q'])) {
                     $q = "%" . $_GET['q'] . "%";
                     $stmt = $connection->prepare(
-                        "SELECT users.user_code AS u_code, users_data.user_f_name AS f_name, 
-                        users_data.user_l_name AS l_name, users_score.user_score AS score,
-                        users_data.user_district AS district FROM users
+                        "SELECT users.user_code AS u_code, users_data.user_full_name AS name,
+                        users_score.user_score AS score, users_data.user_district AS district FROM users
                         INNER JOIN users_data ON users.user_code = users_data.user_code
                         INNER JOIN users_score ON users.user_code = users_score.user_code
-                        WHERE users.user_code LIKE :q OR users_data.user_f_name LIKE :q OR users_data.user_l_name LIKE :q"
+                        WHERE users_data.user_id LIKE :q OR users_data.user_full_name LIKE :q"
                     );
                     $stmt->bindParam(":q", $q);
                     $stmt->execute();
                     $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
                     if ($result) {
-                        echo firstUserInLeaderboard(1, $result['f_name'] . " " . $result['l_name'], $result['district'], $result['score']);
+                        echo firstUserInLeaderboard(1, $result['name'], $result['district'], $result['score']);
                     } else {
                         echo "<h2>No user found.<h2>";
                     }
