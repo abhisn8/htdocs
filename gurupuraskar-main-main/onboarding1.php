@@ -361,7 +361,7 @@ if (isset($_POST['continue-btn']) && isset($_GET['back']) && $_GET['back'] === "
                     </span>
                     <select id="type-of-institute" class="select-option" title="Select your state" name="institute-type" id="" required>
                         <option value="">Select type of institution</option>
-                        <option value="Schools - Govt/Pvt">College - Aided/Unaided</option>
+                        <option value="Schools-Govt/Pvt">Schools - Govt/Pvt</option>
                         <option value="College - Aided/Unaided">College - Aided/Unaided</option>
                         <option value="Polytechnique – Govt/Pvt">Polytechnique – Govt/Pvt</option>
                         <option value="Engineering – Govt/Pvt">Engineering – Govt/Pvt</option>
